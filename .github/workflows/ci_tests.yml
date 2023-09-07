@@ -5,18 +5,6 @@ on:
   pull_request:
     branches: [main, master]
 jobs:
-  start-server:
-    timeout-minutes: 60
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - name: Install dependencies
-        run: npm ci
-      - name: start-server
-        run: npm run start
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
