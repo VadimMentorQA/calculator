@@ -27,12 +27,12 @@ jobs:
           node-version: 18
       - name: Install dependencies
         run: npm ci
+      - name: jest
+        run: npm run test
       - name: Start server
         run: npm run start &
       - name: Install newman
         run: npm install -g newman
-      - name: jest
-        run: npm run test
       - name: Run Postman tests
         run: newman run https://api.postman.com/collections/12717861-1706152c-b5d3-4c65-974c-1f51f68ebd27\?access_key\=PMAT-01H9R70VQAG4AM7YVNPWS1DHQP
       - name: Run Cypress tests
