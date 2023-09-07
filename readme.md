@@ -1,5 +1,5 @@
 # Clone the project
-git clone https://github.com/VadimQaqug2020/calculator-e2e.git
+git clone https://github.com/VadimMentorQA/calculator.git
 
 # Navigate to the project directory
 cd calculator
