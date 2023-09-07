@@ -1,0 +1,31 @@
+name: CI Tests
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm ci
+      - name: Install newman
+        run: npm install -g newman
+      - name: jest
+        run: npm run test
+      - name: Run Postman tests
+        run: newman run https://api.postman.com/collections/12717861-1706152c-b5d3-4c65-974c-1f51f68ebd27\?access_key\=PMAT-01H9R70VQAG4AM7YVNPWS1DHQP
+      - name: Run Cypress tests
+        run: npx cypress run
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-report
+          path: cypress-report/
+          retention-days: 30
