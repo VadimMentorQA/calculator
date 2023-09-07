@@ -19,6 +19,8 @@ jobs:
         run: npm install -g newman
       - name: jest
         run: npm run test
+      - name: start server
+        run: npm run start
       - name: Run Postman tests
         run: newman run https://api.postman.com/collections/12717861-1706152c-b5d3-4c65-974c-1f51f68ebd27\?access_key\=PMAT-01H9R70VQAG4AM7YVNPWS1DHQP
       - name: Run Cypress tests
