@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [main, master]
 jobs:
+  start-server:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run start
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
