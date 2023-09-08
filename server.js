@@ -12,8 +12,7 @@ function calculate(num1, num2, operation) {
 
     let result;
     switch (operation) {
-        case 'adding':
-        // case 'add':
+        case 'add':
             result = num1 + num2;
             break;
         case 'subtract':
