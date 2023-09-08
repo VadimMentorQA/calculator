@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node server.js",
+    "start": "node server.json",
     "test": "jest --detectOpenHandles --forceExit"
   },
   "dependencies": {
