@@ -40,4 +40,13 @@ describe("web UI tests - ", () => {
     cy.get("#result").should("have.text", "Result: 0.5");
     console.log("divide 2 numbers test passed");
   });
+
+  it("exponent a number", () => {
+    cy.get("#num1").type("2");
+    cy.get("#num2").type("3");
+    cy.get("#operation").select("exponentiation");
+    cy.get("#calculate").click();
+    cy.get("#result").should("have.text", "Result: 8");
+    console.log("exponent a number test passed");
+  });
 });

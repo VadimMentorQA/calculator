@@ -22,7 +22,7 @@ jobs:
       - name: Install newman
         run: npm install -g newman
       - name: Run Postman tests
-        run: newman run https://api.postman.com/collections/12717861-1706152c-b5d3-4c65-974c-1f51f68ebd27\?access_key\=PMAT-01H9R70VQAG4AM7YVNPWS1DHQP
+        run: newman run https://api.postman.com/collections/29269746-aaae8325-e784-4eef-92b4-9218fc15e006?access_key=PMAT-01H9WEWYQ2A4A9SG6M9JV6X5T2
       - name: Run Cypress tests
         run: npx cypress run
       - uses: actions/upload-artifact@v3
