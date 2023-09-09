@@ -27,6 +27,9 @@ function calculate(num1, num2, operation) {
             }
             result = num1 / num2;
             break;
+        case 'exponentiation':
+            result = num1 ** num2;
+            break;   
         default:
             return { error: 'Invalid operation' };
     }
