@@ -13,10 +13,10 @@ function calculate(num1, num2, operation) {
     let result;
     switch (operation) {
         case 'add':
-            result = num1 + num2;
+            result = num1 + num1;
             break;
         case 'subtract':
-            result = num1 - num2;
+            result = num1 - num1;
             break;
         case 'multiply':
             result = num1 * num2;
