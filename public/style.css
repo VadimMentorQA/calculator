@@ -1,41 +1,69 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .input-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-input[type="number"], select {
-    margin-right: 10px;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
+input[type="number"],
+select {
+  transition: all 0.3s ease;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+select:focus {
+  transform: scale(1.1);
 }
 
 button {
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 #result {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+}
+.input-group input[type="number"] {
+  width: 200px;
 }
