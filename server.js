@@ -19,8 +19,7 @@ function calculate(num1, num2, operation) {
       result = num1 - num2;
       break;
     case "multiply":
-      // result = num1 * num2;
-      result = num1 - num2;
+      result = num1 * num2;
       break;
     case "divide":
       if (num2 === 0) {
