@@ -32,7 +32,7 @@ npm run test
 
 # Run the API tests using newman - work in progress
 
-newman run _paste your postman collection link here_
+newman run https://api.postman.com/collections/32807344-8a9cced9-ad3c-4184-903d-782543772f83?access_key=PMAT-01HRA0M896WR1W5S67ZJYNM4XD
 
 # Run the e2e tests in UI mode
 
