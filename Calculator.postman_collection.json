@@ -1,0 +1,871 @@
+{
+	"info": {
+		"_postman_id": "b51a5a9b-40ef-4254-b61e-c57fb4eb1206",
+		"name": "Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12717861",
+		"_collection_link": "https://www.postman.com/dark-eclipse-936789/workspace/qa-jan24/collection/12717861-b51a5a9b-40ef-4254-b61e-c57fb4eb1206?action=share&source=collection_link&creator=12717861"
+	},
+	"item": [
+		{
+			"name": "Adding",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check adding\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(10);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":5,\"operation\":\"add\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subtraction",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check subtraction\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(0);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":5,\"operation\":\"subtract\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiplying",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check multiplying\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(25);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":5,\"operation\":\"multiply\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dividing",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check dividing\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":5,\"operation\":\"divide\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exponentiation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check exponentiation\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(3125);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":5,\"operation\":\"exponentiation\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subtraction with bigger second number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check subtraction with bigger second number\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(-5);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":10,\"operation\":\"subtract\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiplying on a negative number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check multiplying on a negative number\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(-25);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":-5,\"operation\":\"multiply\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiplying on zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check multiplying on zero\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(0);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":0,\"operation\":\"multiply\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dividing by zero",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.negativeTest)();",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Cannot divide by zero\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":0,\"operation\":\"divide\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Exponentiation to zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.basicCalculatorTest)();",
+							"",
+							"pm.test(\"Check exponentiation to zero\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.result).to.eql(1);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":0,\"operation\":\"exponentiation\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid operation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.negativeTest)();",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Invalid operation\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"num2\":5,\"operation\":\"test\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Operations with invalid data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"eval(globals.negativeTest)();",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Please enter valid numbers\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Linux\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "host",
+						"value": "localhost"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"num1\":5,\"operation\":\"add\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/calculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"postman.setGlobalVariable('basicCalculatorTest', () => {",
+					"    pm.test(\"Status code is 200\", function () {",
+					"        pm.response.to.have.status(200);",
+					"    });",
+					"",
+					"    pm.test(\"To have result property\", function () {",
+					"        pm.expect(pm.response.json()).to.have.property('result');",
+					"    });",
+					"});",
+					"",
+					"postman.setGlobalVariable('negativeTest', () => {",
+					"    pm.test(\"Status code is 200\", function () {",
+					"        pm.response.to.have.status(200);",
+					"    });",
+					"",
+					"    pm.test(\"To have error property\", function () {",
+					"        pm.expect(pm.response.json()).to.have.property('error');",
+					"    });",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
